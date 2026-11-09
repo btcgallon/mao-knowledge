@@ -1,0 +1,22 @@
+.day{font-size:24rpx;letter-spacing:4rpx;color:#8b1e24;margin:10rpx 0 26rpx}
+.mk{font-size:22rpx;letter-spacing:4rpx;color:#8b1e24}
+.mt{font-size:56rpx;line-height:1.35;font-family:Georgia,"Songti SC",serif;margin:10rpx 0 14rpx;letter-spacing:2rpx}
+.mh{color:#57534a;font-size:28rpx;line-height:1.8}
+.quote{border-left:4rpx solid #8b1e24;padding:4rpx 0 4rpx 22rpx;margin:28rpx 0 10rpx}
+.qt{font-family:Georgia,"Songti SC",serif;font-size:32rpx;line-height:1.95;color:#241f1c}
+.qs{font-size:22rpx;color:#8a8578;margin-top:10rpx;letter-spacing:2rpx}
+.label{font-size:23rpx;letter-spacing:6rpx;color:#8b1e24;margin:44rpx 0 16rpx;border-top:1rpx solid #d9d2c3;padding-top:24rpx}
+.steps .s{display:flex;margin-bottom:16rpx}
+.steps .n{width:34rpx;height:34rpx;line-height:32rpx;text-align:center;border:1rpx solid #8b1e24;color:#8b1e24;font-size:19rpx;border-radius:50%;margin-right:16rpx;flex:none;margin-top:6rpx}
+.steps .st{font-size:28rpx;line-height:1.85;color:#2c2925}
+.card{background:#fffdf8;border:1rpx solid #d9d2c3;padding:26rpx;margin-bottom:18rpx}
+.ct{font-family:Georgia,"Songti SC",serif;font-size:31rpx;margin-bottom:10rpx}
+.cp{font-size:26rpx;line-height:1.85;color:#57534a;margin-bottom:6rpx}
+.cl{font-size:26rpx;line-height:1.85;color:#8b1e24;margin-top:8rpx}
+.cs{font-size:21rpx;color:#8a8578;margin-top:8rpx;letter-spacing:2rpx}
+.acts{margin-top:40rpx;display:flex;flex-wrap:wrap;gap:16rpx}
+.acts .btn{flex:1;min-width:200rpx;margin-top:0;font-size:26rpx;padding:20rpx;letter-spacing:2rpx}
+.btn.ghost{background:none;color:#57534a;border:1rpx solid #d9d2c3}
+.btn{background:#8b1e24;color:#fff;text-align:center;border-radius:4rpx}
+.err{color:#8b1e24;font-size:26rpx;margin-top:20rpx;line-height:1.8}
+.small{font-size:21rpx;color:#8a8578;line-height:1.8;margin-top:22rpx}

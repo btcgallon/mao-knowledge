@@ -1,0 +1,11 @@
+{
+  "name": "mao-knowledge",
+  "version": "1.0.0",
+  "description": "把《毛泽东选集》1—5 卷拆成「原话 → 历史史实 → 可迁移方法」的单文件知识库",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node site/server.mjs",
+    "build": "node _src/build_single.mjs"
+  }
+}

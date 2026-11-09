@@ -1,0 +1,30 @@
+<view class="wrap">
+  <view class="h1">方法论</view>
+  <view class="sub">{{meta.methods}} 张卡片 · 原话均逐字校验</view>
+  <view class="tip" wx:if="{{err}}" style="color:#8b1e24">{{err}}</view>
+
+  <scroll-view scroll-x style="white-space:nowrap;margin-bottom:24rpx">
+    <view class="chip" style="display:inline-block" wx:for="{{cats}}" wx:key="*this" data-c="{{item}}" bindtap="pickCat">
+      <text style="{{cat===item?'color:#8b1e24;':''}}">{{item}}</text>
+    </view>
+  </scroll-view>
+
+  <block wx:for="{{list}}" wx:key="id">
+    <view wx:if="{{cat==='全部'||item.cat===cat}}">
+      <view class="card" data-id="{{item.id}}" bindtap="toggle">
+        <view class="k">{{item.cat}}</view>
+        <view class="n">{{item.name}}</view>
+        <view class="h">{{item.hook}}</view>
+        <block wx:if="{{open===item.id}}">
+          <view class="q" wx:if="{{item.quote}}">{{item.quote}}<text style="display:block;font-size:22rpx;color:#8a8578;font-family:sans-serif;margin-top:8rpx">{{item.src}}</text></view>
+          <view class="label" style="margin-top:20rpx">照着做</view>
+          <view class="li" wx:for="{{item.steps}}" wx:key="*this">{{index+1}}. {{item}}</view>
+          <view class="label" style="margin-top:20rpx">什么时候用</view>
+          <view class="li">{{item.fit}}</view>
+          <view class="label" style="margin-top:20rpx">什么时候会翻车</view>
+          <view class="li">{{item.risk}}</view>
+        </block>
+      </view>
+    </view>
+  </block>
+</view>

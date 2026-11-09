@@ -1,0 +1,50 @@
+<view class="wrap">
+  <view class="h1">把你的困难，<text class="red">放进方法里</text></view>
+  <view class="sub">原文原话 · 历史现场 · 今天怎么做</view>
+
+  <textarea value="{{text}}" bindinput="onInput" placeholder="越具体越好：谁、什么场景、他做了什么、你现在的处境。&#10;例：组里有个老员工，会上答应，会后按自己一套做，还在群里阴阳怪气。我一纠正，他就说我外行。" />
+
+  <view class="chips">
+    <view class="chip" wx:for="{{examples}}" wx:key="*this" data-t="{{item}}" bindtap="useExample">{{item}}</view>
+  </view>
+
+  <view class="btn {{loading?'dis':''}}" bindtap="{{loading?'':'analyze'}}">{{loading?'正在拆解…':'开始拆解'}}</view>
+  <view class="tip" wx:if="{{err}}" style="color:#8b1e24;margin-top:20rpx">{{err}}</view>
+
+  <block wx:if="{{r}}">
+    <view class="label">壹 · 形势</view>
+    <view class="grid">
+      <view class="kv"><view class="t">主要矛盾</view><view class="c">{{r.read.main}}</view></view>
+      <view class="kv"><view class="t">敌友</view><view class="c">{{r.read.friends}}</view></view>
+      <view class="kv"><view class="t">力量对比</view><view class="c">{{r.read.balance}}</view></view>
+      <view class="kv"><view class="t">陷阱</view><view class="c">{{r.read.trap}}</view></view>
+    </view>
+
+    <view class="label">贰 · 对得上的方法</view>
+    <view class="card" wx:for="{{r.methods}}" wx:key="id">
+      <view class="k">方法</view>
+      <view class="n">{{item.name}}</view>
+      <view class="h">{{item.why}}</view>
+      <view class="q" wx:if="{{item.quote}}">{{item.quote}}<text style="display:block;font-size:22rpx;color:#8a8578;font-family:sans-serif;margin-top:8rpx">{{item.source}}</text></view>
+    </view>
+
+    <view class="label">叁 · 怎么做</view>
+    <view class="plan">
+      <view class="step" wx:for="{{r.plan}}" wx:key="title">
+        <view class="no">{{index+1}}</view>
+        <view class="t">{{item.title}}</view>
+        <view class="a">{{item.action}}</view>
+      </view>
+    </view>
+
+    <view class="label">肆 · 对方会怎么破</view>
+    <view class="card"><view class="li" wx:for="{{r.counter}}" wx:key="*this">· {{item}}</view></view>
+
+    <block wx:if="{{r.avoid.length}}">
+      <view class="label">不要做什么</view>
+      <view class="card"><view class="li" wx:for="{{r.avoid}}" wx:key="*this">× {{item}}</view></view>
+    </block>
+
+    <view class="line" wx:if="{{r.line}}">「{{r.line}}」</view>
+  </block>
+</view>

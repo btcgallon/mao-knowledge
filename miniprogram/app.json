@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/daily/daily",
+    "pages/index/index",
+    "pages/methods/methods"
+  ],
+  "window": {
+    "navigationBarTitleText": "毛泽东方法论",
+    "navigationBarBackgroundColor": "#f5f1e8",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f1e8"
+  },
+  "tabBar": {
+    "color": "#8a8578",
+    "selectedColor": "#8b1e24",
+    "backgroundColor": "#fffdf8",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/daily/daily", "text": "每日" },
+      { "pagePath": "pages/index/index", "text": "诊断" },
+      { "pagePath": "pages/methods/methods", "text": "方法论" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

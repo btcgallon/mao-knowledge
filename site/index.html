@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>毛泽东方法论 · 拆书知识库</title>
+<meta name="description" content="把《毛泽东选集》拆成「原话 → 历史史实 → 可迁移方法」，并能输入你遇到的困难，用对应方法论给出应对方案。">
+<link rel="stylesheet" href="v2.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="brand">毛泽东方法论<small>拆书 · 原话 · 战例 · 诊断</small></div>
+    <nav>
+      <button data-view="diagnose">诊断</button>
+      <button data-view="methods">方法论</button>
+      <button data-view="cases">战例</button>
+      <button data-view="articles">文章库</button>
+      <button data-view="guide">导读</button>
+      <button data-view="settings">设置</button>
+      <button class="gbtn" id="gbtn">模型 · 未配置</button>
+    </nav>
+  </div>
+</header>
+<main id="app"></main>
+<noscript>
+  <div style="max-width:720px;margin:60px auto;padding:20px 24px;border:1px solid #e0d8c8;background:#fffdf8;font-size:14px;line-height:1.9">
+    这个页面需要 JavaScript 才能运行。请用 <b>Chrome</b> 或 <b>Edge</b> 打开；iPhone 的「文件」预览不执行脚本，需要改用支持网页的浏览器打开。
+  </div>
+</noscript>
+<footer>
+  文本依据：中文马克思主义文库《毛泽东选集》1—5 卷电子全文。
+  库内原话均由程序回原文逐字比对；不见于原文的流传说法标注为「流传概括」，出自《选集》以外的引文标注为「库外引文」。
+  本库只做方法拆解，不做政治评价。
+</footer>
+<script>
+/* 脚本没跑起来时别留白屏：把原因写到页面上，并提示换浏览器 */
+window.addEventListener("error", function (e) {
+  var a = document.getElementById("app");
+  if (!a || a.dataset.ready) return;
+  var msg = String((e && e.message) || "未知错误").replace(/[<>&]/g, function (c) {
+    return { "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c];
+  });
+  a.innerHTML = "<div style='max-width:720px;margin:60px auto;padding:20px 24px;border:1px solid #e0d8c8;background:#fffdf8;font-size:14px;line-height:1.9'>" +
+    "<b>页面脚本没有跑起来。</b><br>原因：" + msg + "<br>" +
+    "请换 <b>Chrome</b> 或 <b>Edge</b> 打开这个文件；Safari 对本地文件（file://）的限制更多。</div>";
+});
+</script>
+<script src="kb.js"></script>
+<script src="v2.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<view class="wrap">
+  <view class="day">{{dateText}} · 每日一则</view>
+
+  <view wx:if="{{loading}}" class="tip">正在取今天的内容…</view>
+  <view wx:if="{{err}}" class="err">{{err}}</view>
+
+  <block wx:if="{{pack}}">
+    <view class="mk">{{pack.method.cat}}</view>
+    <view class="mt">{{pack.method.name}}</view>
+    <view class="mh">{{pack.method.hook}}</view>
+
+    <view class="quote" wx:if="{{pack.method.quote}}">
+      <view class="qt">{{pack.method.quote}}</view>
+      <view class="qs">{{pack.method.src}}</view>
+    </view>
+
+    <view class="label">今天怎么做</view>
+    <view class="steps">
+      <view class="s" wx:for="{{pack.method.steps}}" wx:key="*this">
+        <text class="n">{{index+1}}</text><text class="st">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="label">历史现场</view>
+    <view class="card">
+      <view class="ct">{{pack.fact.name}} · {{pack.fact.time}}</view>
+      <view class="cp">当时：{{pack.fact.situation}}</view>
+      <view class="cp">判断：{{pack.fact.decision}}</view>
+      <view class="cp">结果：{{pack.fact.result}}</view>
+      <view class="cl">今天怎么用：{{pack.fact.lesson}}</view>
+    </view>
+
+    <view class="label">相关概念 · {{pack.concept.name}}</view>
+    <view class="card">
+      <view class="cp">{{pack.concept.text}}</view>
+      <view class="cs">出自 {{pack.concept.src}}</view>
+    </view>
+
+    <view class="label" wx:if="{{pack.workcase}}">日常案例 · {{pack.workcase.scene}}</view>
+    <view class="card" wx:if="{{pack.workcase}}">
+      <view class="ct">{{pack.workcase.title}}</view>
+      <view class="cp">{{pack.workcase.story}}</view>
+      <view class="cl">怎么做：{{pack.workcase.how}}</view>
+    </view>
+
+    <view class="acts">
+      <view class="btn ghost" bindtap="copyAll">复制今天的</view>
+      <view class="btn ghost" bindtap="toMethods">看这张方法卡</view>
+      <view class="btn" bindtap="subscribe">每天提醒我</view>
+    </view>
+    <view class="tip small">下拉可刷新 · 每天零点换一则 · 订阅消息由你自己在小程序里勾选</view>
+  </block>
+</view>

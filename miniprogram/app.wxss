@@ -1,0 +1,29 @@
+page{background:#f5f1e8;color:#1b1a18;font-size:30rpx;line-height:1.75;font-family:-apple-system,"PingFang SC",sans-serif}
+.wrap{padding:36rpx 32rpx 80rpx}
+.serif{font-family:Georgia,"Songti SC",serif}
+.h1{font-size:52rpx;line-height:1.35;font-family:Georgia,"Songti SC",serif;margin:20rpx 0 16rpx}
+.h1 .red{color:#8b1e24}
+.sub{color:#57534a;font-size:27rpx;margin-bottom:36rpx}
+.label{font-size:24rpx;letter-spacing:4rpx;color:#8b1e24;margin:32rpx 0 12rpx}
+.card{background:#fffdf8;border:1rpx solid #d9d2c3;padding:28rpx;margin-bottom:20rpx}
+.card .k{font-size:22rpx;color:#8b1e24;letter-spacing:3rpx}
+.card .n{font-size:34rpx;font-family:Georgia,"Songti SC",serif;margin:8rpx 0}
+.card .h{color:#57534a;font-size:27rpx}
+.card .q{font-family:Georgia,"Songti SC",serif;border-left:3rpx solid #8b1e24;padding-left:18rpx;margin-top:16rpx;font-size:27rpx;color:#3a3630}
+textarea{width:100%;height:300rpx;background:#fffdf8;border:1rpx solid #d9d2c3;padding:24rpx;box-sizing:border-box;font-size:29rpx;line-height:1.8}
+.btn{background:#8b1e24;color:#fff;text-align:center;padding:24rpx;margin-top:24rpx;letter-spacing:6rpx;font-size:29rpx;border-radius:4rpx}
+.btn.dis{opacity:.5}
+.chips{display:flex;flex-wrap:wrap;margin-top:20rpx}
+.chip{border:1rpx solid #d9d2c3;color:#57534a;font-size:24rpx;padding:8rpx 20rpx;border-radius:30rpx;margin:0 14rpx 14rpx 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18rpx;margin-top:24rpx}
+.kv{background:#fffdf8;border:1rpx solid #d9d2c3;padding:20rpx}
+.kv .t{font-size:22rpx;color:#8b1e24;letter-spacing:2rpx}
+.kv .c{font-size:26rpx;margin-top:6rpx;line-height:1.7}
+.plan{border-left:1rpx solid #d9d2c3;margin-left:16rpx;padding-left:28rpx}
+.step{padding-bottom:28rpx;position:relative}
+.step .no{position:absolute;left:-44rpx;top:0;width:34rpx;height:34rpx;line-height:34rpx;text-align:center;border:1rpx solid #8b1e24;color:#8b1e24;font-size:20rpx;background:#f5f1e8;border-radius:50%}
+.step .t{font-family:Georgia,"Songti SC",serif;font-size:31rpx}
+.step .a{color:#57534a;font-size:27rpx;margin-top:4rpx}
+.line{font-family:Georgia,"Songti SC",serif;color:#8b1e24;text-align:center;font-size:36rpx;padding:40rpx 10rpx;border-top:1rpx solid #d9d2c3;border-bottom:1rpx solid #d9d2c3;margin:40rpx 0;line-height:1.6}
+.tip{color:#57534a;font-size:25rpx}
+.li{color:#57534a;font-size:27rpx;margin:6rpx 0}

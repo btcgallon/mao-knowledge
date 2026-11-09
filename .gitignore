@@ -1,0 +1,28 @@
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+
+# 密钥：绝对不要提交
+_src/.env.local
+.env
+.env.*
+
+# 抓取与调试的中间产物（跑 fetch.py 会重新生成）
+_src/raw/
+_src/*.log
+_src/_log*.txt
+_src/*.txt
+_src/resp*.json
+_src/t.json
+_src/*.png
+_src/collect.htm
+_shots/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 工作笔记（不随项目发布）
+毛泽东方法论_核验反馈_*.md
